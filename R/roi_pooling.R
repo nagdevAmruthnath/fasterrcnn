@@ -1,3 +1,4 @@
+
 RoiPoolingConv <- R6::R6Class(
   "RoiPoolingConv",
   inherit = keras::KerasLayer,

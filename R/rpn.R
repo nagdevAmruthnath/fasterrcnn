@@ -1,3 +1,10 @@
+#' Region of Proposal Network
+#' @param num_anchors enter number of anchors. Ex 4
+#' @return creates a classifer network
+#' @examples
+#' # region_proposal_network(num_anchors=4)
+#' @export
+
 region_proposal_network <- function(num_anchors) {
   keras::keras_model_custom(model_fn = function(self) {
 

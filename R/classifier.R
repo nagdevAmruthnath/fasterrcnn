@@ -1,4 +1,13 @@
-classifier_network <- function(n_classes = 21, num_rois, pooling_regions = 7) {
+#' Custom classier network
+#' @param n_classes  enter number of classes.
+#' @param num_rois enter number of roi's.
+#' @param pooling_regions enter number of pooling regions.
+#' @return creates a classifer network
+#' @examples
+#' @export
+
+classifier_network <- function(n_classes, num_rois, pooling_regions) {
+
   keras::keras_model_custom(model_fn = function(self) {
 
     self$roi_pooling_conv <- layer_roi_pooling_conv(
